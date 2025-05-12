@@ -532,135 +532,134 @@ const walkingBassExercises = [
             { keys: ["db/2"], duration: "q", midiValue: 37 }  // Db (b13 di F o b9)
         ] // end notesBass
     },
-    // =====================================================================================
-    // === Esercizio WB-E-5 - Walking Bass Avanzato+ in MI (Bird Blues Changes) ===
-    // =====================================================================================
-    // Tonalità: Mi. Progressione "Bird Blues" con alta densità armonica.
-    // Mano sinistra: Walking bass molto agile, melodico e ritmicamente vario.
-    // Mano destra: Accordi complessi (qui base, ma pensati per voicings avanzati).
-    {
-        id: "walkingBass-E-AdvancedPlus1",
-        name: "Walking Bass MI (Avanzato+ Bird Blues)",
-        category: "walking_bass",
-        staveLayout: "grand",
-        keySignature: "E", // Quattro diesis (F#, C#, G#, D#)
-        timeSignature: "4/4",
-        repetitions: 1,
+// =====================================================================================
+// === Esercizio WB-E-5-Rev1 - Walking Bass Avanzato in MI (Bird Blues - Revised Register) ===
+// =====================================================================================
+// Tonalità: Mi. Progressione "Bird Blues" con registro del basso rivisto.
+// Mano sinistra: Walking bass agile, melodico, in un registro più acuto.
+// Mano destra: Accordi.
+{
+    id: "walkingBass-E-BirdBlues-Rev1",
+    name: "Walking Bass MI (Bird Blues - Revised)",
+    category: "walking_bass",
+    staveLayout: "grand",
+    keySignature: "E", // Quattro diesis (F#, C#, G#, D#)
+    timeSignature: "4/4",
+    repetitions: 1,
 
-        notesTreble: [ // Mano Destra: Accordi (base per la struttura)
-            // Bar 1 (Emaj7: E-G#-B-D#)
-            { keys: ["e/3", "ab/3", "b/3", "eb/4"], duration: "w", midiValues: [52, 56, 59, 63] }, // G# è Ab, D# è Eb
-            // Bar 2 (F#m7: F#-A-C#-E | B7: B-D#-F#-A)
-            { keys: ["gb/3", "a/3", "db/4", "e/4"], duration: "h", midiValues: [54, 57, 61, 64] }, // F# è Gb, C# è Db
-            { keys: ["b/2", "eb/3", "gb/3", "a/3"], duration: "h", midiValues: [47, 51, 54, 57] },
-            // Bar 3 (Em7: E-G-B-D | A7: A-C#-E-G)
-            { keys: ["e/3", "g/3", "b/3", "d/4"], duration: "h", midiValues: [52, 55, 59, 62] },
-            { keys: ["a/2", "db/3", "e/3", "g/3"], duration: "h", midiValues: [45, 49, 52, 55] },
-            // Bar 4 (Dmaj7: D-F#-A-C# | G7: G-B-D-F)
-            { keys: ["d/3", "gb/3", "a/3", "db/4"], duration: "h", midiValues: [50, 54, 57, 61] },
-            { keys: ["g/2", "b/2", "d/3", "f/3"], duration: "h", midiValues: [43, 47, 50, 53] },
+    notesTreble: [ // Mano Destra: Accordi (base per la struttura)
+        // Bar 1 (Emaj7: E-G#-B-D#)
+        { keys: ["e/3", "ab/3", "b/3", "eb/4"], duration: "w", midiValues: [52, 56, 59, 63] },
+        // Bar 2 (F#m7: F#-A-C#-E | B7: B-D#-F#-A)
+        { keys: ["gb/3", "a/3", "db/4", "e/4"], duration: "h", midiValues: [54, 57, 61, 64] },
+        { keys: ["b/2", "eb/3", "gb/3", "a/3"], duration: "h", midiValues: [47, 51, 54, 57] },
+        // Bar 3 (Em7: E-G-B-D | A7: A-C#-E-G)
+        { keys: ["e/3", "g/3", "b/3", "d/4"], duration: "h", midiValues: [52, 55, 59, 62] },
+        { keys: ["a/2", "db/3", "e/3", "g/3"], duration: "h", midiValues: [45, 49, 52, 55] },
+        // Bar 4 (Dmaj7: D-F#-A-C# | G7: G-B-D-F)
+        { keys: ["d/3", "gb/3", "a/3", "db/4"], duration: "h", midiValues: [50, 54, 57, 61] },
+        { keys: ["g/2", "b/2", "d/3", "f/3"], duration: "h", midiValues: [43, 47, 50, 53] },
 
-            // Bar 5 (C#m7: C#-E-G#-B | F#7: F#-A#-C#-E) A# è Bb
-            { keys: ["db/3", "e/3", "ab/3", "b/3"], duration: "h", midiValues: [49, 52, 56, 59] },
-            { keys: ["gb/2", "bb/2", "db/3", "e/3"], duration: "h", midiValues: [42, 46, 49, 52] },
-            // Bar 6 (B7: B-D#-F#-A)
-            { keys: ["b/2", "eb/3", "gb/3", "a/3"], duration: "w", midiValues: [47, 51, 54, 57] },
-            // Bar 7 (Amaj7: A-C#-E-G# | D7alt: D-F#-Ab-C)
-            { keys: ["a/2", "db/3", "e/3", "ab/3"], duration: "h", midiValues: [45, 49, 52, 56] },
-            { keys: ["d/3", "gb/3", "ab/3", "c/4"], duration: "h", midiValues: [50, 54, 56, 60] },
-            // Bar 8 (G#m7: G#-B-D#-F# | C#7alt: C#-E#(F)-G#-B) E# è F
-            { keys: ["ab/2", "b/2", "eb/3", "gb/3"], duration: "h", midiValues: [44, 47, 51, 54] },
-            { keys: ["db/3", "f/3", "ab/3", "b/3"], duration: "h", midiValues: [49, 53, 56, 59] }, // C#7 con E# (F nat)
+        // Bar 5 (C#m7: C#-E-G#-B | F#7: F#-A#-C#-E)
+        { keys: ["db/3", "e/3", "ab/3", "b/3"], duration: "h", midiValues: [49, 52, 56, 59] },
+        { keys: ["gb/2", "bb/2", "db/3", "e/3"], duration: "h", midiValues: [42, 46, 49, 52] },
+        // Bar 6 (B7: B-D#-F#-A)
+        { keys: ["b/2", "eb/3", "gb/3", "a/3"], duration: "w", midiValues: [47, 51, 54, 57] },
+        // Bar 7 (Amaj7: A-C#-E-G# | D7alt: D-F#-Ab-C)
+        { keys: ["a/2", "db/3", "e/3", "ab/3"], duration: "h", midiValues: [45, 49, 52, 56] },
+        { keys: ["d/3", "gb/3", "ab/3", "c/4"], duration: "h", midiValues: [50, 54, 56, 60] },
+        // Bar 8 (G#m7: G#-B-D#-F# | C#7alt: C#-E#(F)-G#-B)
+        { keys: ["ab/2", "b/2", "eb/3", "gb/3"], duration: "h", midiValues: [44, 47, 51, 54] },
+        { keys: ["db/3", "f/3", "ab/3", "b/3"], duration: "h", midiValues: [49, 53, 56, 59] },
 
-            // Bar 9 (F#m7: F#-A-C#-E)
-            { keys: ["gb/2", "a/2", "db/3", "e/3"], duration: "w", midiValues: [42, 45, 49, 52] },
-            // Bar 10 (B7sus4: B-E-F#-A | B7: B-D#-F#-A)
-            { keys: ["b/2", "e/3", "gb/3", "a/3"], duration: "h", midiValues: [47, 52, 54, 57] },
-            { keys: ["b/2", "eb/3", "gb/3", "a/3"], duration: "h", midiValues: [47, 51, 54, 57] },
-            // Bar 11 (Emaj7 | C#7alt: C#-F-G#-B)
-            { keys: ["e/3", "ab/3", "b/3", "eb/4"], duration: "h", midiValues: [52, 56, 59, 63] },
-            { keys: ["db/3", "f/3", "ab/3", "b/3"], duration: "h", midiValues: [49, 53, 56, 59] },
-            // Bar 12 (F#m7 | B7alt: B-D#-E#-A -> B-D#-F-A)
-            { keys: ["gb/3", "a/3", "db/4", "e/4"], duration: "h", midiValues: [54, 57, 61, 64] },
-            { keys: ["b/2", "eb/3", "f/3", "a/3"], duration: "h", midiValues: [47, 51, 53, 57] } // B7 con E# (F nat)
-        ], // end notesTreble
+        // Bar 9 (F#m7: F#-A-C#-E)
+        { keys: ["gb/2", "a/2", "db/3", "e/3"], duration: "w", midiValues: [42, 45, 49, 52] },
+        // Bar 10 (B7sus4: B-E-F#-A | B7: B-D#-F#-A)
+        { keys: ["b/2", "e/3", "gb/3", "a/3"], duration: "h", midiValues: [47, 52, 54, 57] },
+        { keys: ["b/2", "eb/3", "gb/3", "a/3"], duration: "h", midiValues: [47, 51, 54, 57] },
+        // Bar 11 (Emaj7 | C#7alt: C#-F-G#-B)
+        { keys: ["e/3", "ab/3", "b/3", "eb/4"], duration: "h", midiValues: [52, 56, 59, 63] },
+        { keys: ["db/3", "f/3", "ab/3", "b/3"], duration: "h", midiValues: [49, 53, 56, 59] },
+        // Bar 12 (F#m7 | B7alt: B-D#-E#-A -> B-D#-F-A)
+        { keys: ["gb/3", "a/3", "db/4", "e/4"], duration: "h", midiValues: [54, 57, 61, 64] },
+        { keys: ["b/2", "eb/3", "f/3", "a/3"], duration: "h", midiValues: [47, 51, 53, 57] }
+    ], // end notesTreble
 
-        notesBass: [ // Mano Sinistra: Walking Bass "Bird Blues" in E
-            // Bar 1 (Emaj7) - Linea ascendente con 9a
-            { keys: ["e/1"], duration: "q", midiValue: 28 },   // E
-            { keys: ["gb/1"], duration: "q", midiValue: 30 },  // F# (9a)
-            { keys: ["ab/1"], duration: "q", midiValue: 32 },  // G# (3a)
-            { keys: ["b/1"], duration: "q", midiValue: 35 },   // B (5a)
+    notesBass: [ // Mano Sinistra: Walking Bass "Bird Blues" in E - Registro Rivisto
+        // Bar 1 (Emaj7) - Linea ascendente melodica
+        { keys: ["e/2"], duration: "q", midiValue: 40 },   // E
+        { keys: ["ab/2"], duration: "q", midiValue: 44 },  // G# (3a)
+        { keys: ["b/2"], duration: "q", midiValue: 47 },   // B (5a)
+        { keys: ["eb/3"], duration: "q", midiValue: 51 },  // D# (7M)
 
-            // Bar 2 (F#m7 - B7) - Connessione II-V
-            { keys: ["gb/1"], duration: "q", midiValue: 30 },  // F# (F#m7)
-            { keys: ["e/2"], duration: "q", midiValue: 40 },   // E (b7 di F#)
-            { keys: ["eb/2"], duration: "q", midiValue: 39 },  // D# (3a di B7)
-            { keys: ["b/1"], duration: "q", midiValue: 35 },   // B (B7)
+        // Bar 2 (F#m7 - B7) - Connessione II-V
+        { keys: ["gb/2"], duration: "q", midiValue: 42 },  // F# (F#m7)
+        { keys: ["e/3"], duration: "q", midiValue: 52 },   // E (b7 di F#m7)
+        { keys: ["eb/3"], duration: "q", midiValue: 51 },  // D# (3a di B7)
+        { keys: ["b/2"], duration: "q", midiValue: 47 },   // B (B7)
 
-            // Bar 3 (Em7 - A7) - Altro II-V
-            { keys: ["e/1"], duration: "q", midiValue: 28 },   // E (Em7)
-            { keys: ["d/2"], duration: "q", midiValue: 38 },   // D (b7 di E)
-            { keys: ["db/2"], duration: "q", midiValue: 37 },  // C# (3a di A7)
-            { keys: ["a/1"], duration: "q", midiValue: 33 },   // A (A7)
+        // Bar 3 (Em7 - A7) - Altro II-V
+        { keys: ["e/2"], duration: "q", midiValue: 40 },   // E (Em7)
+        { keys: ["d/3"], duration: "q", midiValue: 50 },   // D (b7 di Em7)
+        { keys: ["db/3"], duration: "q", midiValue: 49 },  // C# (3a di A7)
+        { keys: ["a/2"], duration: "q", midiValue: 45 },   // A (A7)
 
-            // Bar 4 (Dmaj7 - G7)
-            { keys: ["d/1"], duration: "q", midiValue: 26 },   // D (Dmaj7)
-            { keys: ["a/1"], duration: "q", midiValue: 33 },   // A (5a di D)
-            { keys: ["g/1"], duration: "q", midiValue: 31 },   // G (G7)
-            { keys: ["f/1"], duration: "q", midiValue: 29 },   // F (b7 di G)
+        // Bar 4 (Dmaj7 - G7)
+        { keys: ["d/2"], duration: "q", midiValue: 38 },   // D (Dmaj7)
+        { keys: ["gb/2"], duration: "q", midiValue: 42 },  // F# (3a di Dmaj7)
+        { keys: ["b/2"], duration: "q", midiValue: 47 },   // B (3a di G7)
+        { keys: ["g/2"], duration: "q", midiValue: 43 },   // G (G7)
 
-            // Bar 5 (C#m7 - F#7)
-            { keys: ["db/1"], duration: "q", midiValue: 25 },  // C# (C#m7)
-            { keys: ["b/1"], duration: "q", midiValue: 35 },   // B (b7 di C#)
-            { keys: ["bb/1"], duration: "q", midiValue: 34 },  // A# (3a di F#7)
-            { keys: ["gb/1"], duration: "q", midiValue: 30 },  // F# (F#7)
+        // Bar 5 (C#m7 - F#7)
+        { keys: ["db/2"], duration: "q", midiValue: 37 },  // C# (C#m7)
+        { keys: ["b/2"], duration: "q", midiValue: 47 },   // B (b7 di C#m7)
+        { keys: ["bb/2"], duration: "q", midiValue: 46 },  // A# (3a di F#7)
+        { keys: ["gb/2"], duration: "q", midiValue: 42 },  // F# (F#7)
 
-            // Bar 6 (B7) - Linea discendente su B7
-            { keys: ["b/1"], duration: "q", midiValue: 35 },   // B
-            { keys: ["a/1"], duration: "q", midiValue: 33 },   // A (b7)
-            { keys: ["gb/1"], duration: "q", midiValue: 30 },  // F# (5a)
-            { keys: ["eb/1"], duration: "q", midiValue: 27 },  // D# (3a)
+        // Bar 6 (B7) - Linea discendente su B7
+        { keys: ["b/2"], duration: "q", midiValue: 47 },   // B
+        { keys: ["a/2"], duration: "q", midiValue: 45 },   // A (b7)
+        { keys: ["gb/2"], duration: "q", midiValue: 42 },  // F# (5a)
+        { keys: ["eb/2"], duration: "q", midiValue: 39 },  // D# (3a)
 
-            // Bar 7 (Amaj7 - D7alt)
-            { keys: ["a/0"], duration: "q", midiValue: 21 },   // A (Amaj7, ottava bassa)
-            { keys: ["e/1"], duration: "q", midiValue: 28 },   // E (5a di A)
-            { keys: ["d/1"], duration: "q", midiValue: 26 },   // D (D7alt)
-            { keys: ["ab/1"], duration: "q", midiValue: 32 },  // G# (b5 di D7alt)
+        // Bar 7 (Amaj7 - D7alt)
+        { keys: ["a/1"], duration: "q", midiValue: 33 },   // A (Amaj7, radice più bassa ma accettabile)
+        { keys: ["e/2"], duration: "q", midiValue: 40 },   // E (5a di A)
+        { keys: ["d/2"], duration: "q", midiValue: 38 },   // D (D7alt)
+        { keys: ["ab/2"], duration: "q", midiValue: 44 },  // G# (b5 di D7alt)
 
-            // Bar 8 (G#m7 - C#7alt)
-            { keys: ["ab/0"], duration: "q", midiValue: 20 },  // G# (G#m7)
-            { keys: ["gb/1"], duration: "q", midiValue: 30 },  // F# (b7 di G#)
-            { keys: ["f/1"], duration: "q", midiValue: 29 },   // E# (F nat, 3a di C#7alt)
-            { keys: ["db/1"], duration: "q", midiValue: 25 },  // C# (C#7alt)
+        // Bar 8 (G#m7 - C#7alt)
+        { keys: ["ab/1"], duration: "q", midiValue: 32 },  // G# (G#m7, radice più bassa ma accettabile)
+        { keys: ["gb/2"], duration: "q", midiValue: 42 },  // F# (b7 di G#m7)
+        { keys: ["f/2"], duration: "q", midiValue: 41 },   // E# (F nat, 3a di C#7alt)
+        { keys: ["db/2"], duration: "q", midiValue: 37 },  // C# (C#7alt)
 
-            // Bar 9 (F#m7) - Arpeggio con crome
-            { keys: ["gb/0"], duration: "q", midiValue: 18 },  // F# (ottava molto bassa)
-            { keys: ["a/0"], duration: "8", midiValue: 21 },   // A
-            { keys: ["db/1"], duration: "8", midiValue: 25 },  // C#
-            { keys: ["e/1"], duration: "q", midiValue: 28 },   // E
-            { keys: ["gb/1"], duration: "q", midiValue: 30 },  // F#
+        // Bar 9 (F#m7) - Arpeggio con crome
+        { keys: ["gb/1"], duration: "q", midiValue: 30 },  // F# (radice più bassa ma accettabile)
+        { keys: ["a/1"], duration: "8", midiValue: 33 },   // A
+        { keys: ["db/2"], duration: "8", midiValue: 37 },  // C#
+        { keys: ["e/2"], duration: "q", midiValue: 40 },   // E
+        { keys: ["gb/2"], duration: "q", midiValue: 42 },  // F#
 
-            // Bar 10 (B7sus4 - B7) - Movimento sulla sospensione
-            { keys: ["b/0"], duration: "q", midiValue: 23 },   // B
-            { keys: ["e/1"], duration: "q", midiValue: 28 },   // E (nota sus)
-            { keys: ["eb/1"], duration: "q", midiValue: 27 },  // D# (risoluzione a 3a di B7)
-            { keys: ["gb/1"], duration: "q", midiValue: 30 },  // F#
+        // Bar 10 (B7sus4 - B7) - Movimento sulla sospensione
+        { keys: ["b/1"], duration: "q", midiValue: 35 },   // B
+        { keys: ["e/2"], duration: "q", midiValue: 40 },   // E (nota sus)
+        { keys: ["eb/2"], duration: "q", midiValue: 39 },  // D# (risoluzione a 3a di B7)
+        { keys: ["gb/2"], duration: "q", midiValue: 42 },  // F# (5a)
 
-            // Bar 11 (Emaj7 - C#7alt) - Turnaround
-            { keys: ["e/1"], duration: "q", midiValue: 28 },   // E (Emaj7)
-            { keys: ["b/1"], duration: "q", midiValue: 35 },   // B (5a di E)
-            { keys: ["db/1"], duration: "q", midiValue: 25 },  // C# (C#7alt)
-            { keys: ["g/1"], duration: "q", midiValue: 31 },   // G (b5 di C#7alt)
+        // Bar 11 (Emaj7 - C#7alt) - Turnaround
+        { keys: ["e/2"], duration: "q", midiValue: 40 },   // E (Emaj7)
+        { keys: ["b/2"], duration: "q", midiValue: 47 },   // B (5a di E)
+        { keys: ["db/2"], duration: "q", midiValue: 37 },  // C# (C#7alt)
+        { keys: ["g/2"], duration: "q", midiValue: 43 },   // G (b5 di C#7alt)
 
-            // Bar 12 (F#m7 - B7alt) - Turnaround finale
-            { keys: ["gb/1"], duration: "q", midiValue: 30 },  // F# (F#m7)
-            { keys: ["e/1"], duration: "q", midiValue: 28 },   // E (b7 di F#)
-            { keys: ["b/0"], duration: "q", midiValue: 23 },   // B (B7alt)
-            { keys: ["f/1"], duration: "q", midiValue: 29 }    // E# (F nat, #11 o b5 di B7alt, conduce a E)
-        ] // end notesBass
-    },
-
+        // Bar 12 (F#m7 - B7alt) - Turnaround finale
+        { keys: ["gb/2"], duration: "q", midiValue: 42 },  // F# (F#m7)
+        { keys: ["e/2"], duration: "q", midiValue: 40 },   // E (b7 di F#m7)
+        { keys: ["b/1"], duration: "q", midiValue: 35 },   // B (B7alt)
+        { keys: ["f/2"], duration: "q", midiValue: 41 }    // E# (F nat, #11 o b5 di B7alt, conduce a E)
+    ] // end notesBass
+}
 
 ];
 

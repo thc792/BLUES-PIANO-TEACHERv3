@@ -64,7 +64,7 @@ const SCROLL_INTERVAL_MS = 400; // Intervallo di aggiornamento dello scrolling i
 const SCROLL_PIXELS_PER_INTERVAL_BASE = 0.5; // MODIFICATO: Pixel base per intervallo alla velocità minima (slider min=1). Questo è un valore molto basso.
 
 // --- URL Pagina Teoria ---
-const THEORY_PAGE_URL = "https://www.pianohitech.com/teoria-blues"; // URL della pagina di teoria
+const THEORY_PAGE_URL = "https://www.pianohitech.com/teoria-blues-esterna"; // URL della pagina di teoria
 
 // --- Funzioni Inizializzazione e Caricamento Dati ---
 

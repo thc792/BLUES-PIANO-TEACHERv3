@@ -126,27 +126,46 @@ const chapter4Exercises = [
             { keys: ["g/1"], duration: "q", midiValue: 31 },{ keys: ["b/1"], duration: "q", midiValue: 35 },{ keys: ["d/2"], duration: "q", midiValue: 38 },{ keys: ["f/2"], duration: "q", midiValue: 41 },
         ]
     },
-    // =======================================================================================
-    // === Esercizio CH4-EX3: Introduzione al Turnaround Semplice (Armonico e Melodico) ===
+       // =======================================================================================
+    // === Esercizio CH4-EX3 (Corretto senza pause MD iniziali): Introduzione al Turnaround Semplice ===
     // =======================================================================================
     {
-        id: "ch4-ex3-SimpleTurnaround",
-        name: "Cap.4: Turnaround Semplice",
-        category: "chapter_4",
+        id: "ch4-ex3-SimpleTurnaround-NoRHRest", // ID aggiornato
+        name: "Cap.4: Turnaround Semplice (MD Continua)",
+        category: "chapter_4", // Categoria ipotetica
         staveLayout: "grand",
         keySignature: "C",
         timeSignature: "4/4",
-        repetitions: 3, // Per praticare bene il turnaround
-        notesTreble: [ // Melodia che enfatizza il turnaround
-            { keys: ["r/4"], duration: "w" }, { keys: ["r/4"], duration: "w" }, { keys: ["r/4"], duration: "w" }, { keys: ["r/4"], duration: "w" }, // Bar 1-4 Pause
-            { keys: ["r/4"], duration: "w" }, { keys: ["r/4"], duration: "w" }, { keys: ["r/4"], duration: "w" }, { keys: ["r/4"], duration: "w" }, // Bar 5-8 Pause
-            // Turnaround nelle ultime 4 battute: C7 | A7 | Dm7 | G7
+        repetitions: 3,
+        notesTreble: [ // Mano Destra: Melodia continua, con focus sul turnaround
+            // Bar 1 (C7) - Melodia introduttiva semplice
+            { keys: ["g/4"], duration: "q", midiValue: 67 }, { keys: ["e/4"], duration: "q", midiValue: 64 },
+            { keys: ["c/4"], duration: "q", midiValue: 60 }, { keys: ["e/4"], duration: "q", midiValue: 64 },
+            // Bar 2 (C7)
+            { keys: ["g/4"], duration: "h", midiValue: 67 }, { keys: ["c/5"], duration: "h", midiValue: 72 },
+            // Bar 3 (C7)
+            { keys: ["e/4"], duration: "q", midiValue: 64 }, { keys: ["c/4"], duration: "q", midiValue: 60 },
+            { keys: ["d/4"], duration: "q", midiValue: 62 }, { keys: ["eb/4"], duration: "q", midiValue: 63 }, // Movimento bluesy
+            // Bar 4 (C7)
+            { keys: ["e/4"], duration: "w", midiValue: 64 },
+            // Bar 5 (F7) - Melodia su F7
+            { keys: ["a/4"], duration: "q", midiValue: 69 }, { keys: ["f/4"], duration: "q", midiValue: 65 },
+            { keys: ["c/5"], duration: "q", midiValue: 72 }, { keys: ["a/4"], duration: "q", midiValue: 69 },
+            // Bar 6 (F7)
+            { keys: ["f/4"], duration: "h", midiValue: 65 }, { keys: ["eb/5"], duration: "h", midiValue: 75 }, // Eb è b7 di F7
+            // Bar 7 (C7) - Ritorno a C7
+            { keys: ["g/4"], duration: "q", midiValue: 67 }, { keys: ["e/4"], duration: "q", midiValue: 64 },
+            { keys: ["c/4"], duration: "q", midiValue: 60 }, { keys: ["g/4"], duration: "q", midiValue: 67 },
+            // Bar 8 (C7)
+            { keys: ["c/5"], duration: "h", midiValue: 72 }, { keys: ["g/4"], duration: "h", midiValue: 67 },
+
+            // Turnaround nelle ultime 4 battute: C7 | A7 | Dm7 | G7 (Melodia originale mantenuta)
             { keys: ["e/4"], duration: "h", midiValue: 64 }, { keys: ["g/4"], duration: "h", midiValue: 67 }, // Bar 9 (C7)
             { keys: ["db/4"], duration: "h", midiValue: 61 }, { keys: ["a/3"], duration: "h", midiValue: 57 }, // Bar 10 (A7 - C# e A)
             { keys: ["c/4"], duration: "h", midiValue: 60 }, { keys: ["f/4"], duration: "h", midiValue: 65 }, // Bar 11 (Dm7)
             { keys: ["b/3"], duration: "q", midiValue: 59 }, { keys: ["d/4"], duration: "q", midiValue: 62 }, { keys: ["f/4"], duration: "q", midiValue: 65 }, { keys: ["g/4"], duration: "q", midiValue: 67 }, // Bar 12 (G7)
         ],
-        notesBass: [ // Mano Sinistra: Progressione con turnaround I-VI-ii-V
+        notesBass: [ // Mano Sinistra: Progressione con turnaround I-VI-ii-V (come da originale)
             { keys: ["c/2","e/2","g/2","bb/2"], duration: "w", midiValues: [36,40,43,46] }, { keys: ["c/2","e/2","g/2","bb/2"], duration: "w", midiValues: [36,40,43,46] },
             { keys: ["c/2","e/2","g/2","bb/2"], duration: "w", midiValues: [36,40,43,46] }, { keys: ["c/2","e/2","g/2","bb/2"], duration: "w", midiValues: [36,40,43,46] },
             { keys: ["f/1","a/1","c/2","eb/2"], duration: "w", midiValues: [29,33,36,39] }, { keys: ["f/1","a/1","c/2","eb/2"], duration: "w", midiValues: [29,33,36,39] },
@@ -158,44 +177,124 @@ const chapter4Exercises = [
             { keys: ["g/1","b/1","d/2","f/2"], duration: "w", midiValues: [31,35,38,41] }, // Bar 12 (G7)
         ]
     },
-    // =======================================================================================
-    // === Esercizio CH4-EX4: "Call and Response" tra le Mani (Ritmo e Melodia Semplici) ===
+       // =======================================================================================
+    // === Esercizio CH4-EX4 (Corretto senza pause): "Call and Response" Continuo tra le Mani ===
     // =======================================================================================
     {
-        id: "ch4-ex4-HandCallResponse-Simple",
-        name: "Cap.4: Call & Response tra Mani",
-        category: "chapter_4",
+        id: "ch4-ex4-HandCallResponse-Simple-NoPause", // ID aggiornato
+        name: "Cap.4: Call & Response Continuo tra Mani",
+        category: "chapter_4", // Categoria ipotetica
         staveLayout: "grand",
         keySignature: "C",
         timeSignature: "4/4",
         repetitions: 2,
-        notesTreble: [ // Mano Destra: "Response" melodico
-            { keys: ["r/4"], duration: "h" }, { keys: ["g/4"], duration: "q", midiValue: 67 }, { keys: ["eb/4"], duration: "q", midiValue: 63 }, // Bar 1
-            { keys: ["r/4"], duration: "h" }, { keys: ["c/4"], duration: "h", midiValue: 60 },                                             // Bar 2
-            { keys: ["r/4"], duration: "h" }, { keys: ["e/4"], duration: "q", midiValue: 64 }, { keys: ["g/4"], duration: "q", midiValue: 67 }, // Bar 3
-            { keys: ["r/4"], duration: "h" }, { keys: ["c/5"], duration: "h", midiValue: 72 },                                             // Bar 4
-            { keys: ["r/4"], duration: "h" }, { keys: ["a/4"], duration: "q", midiValue: 69 }, { keys: ["f/4"], duration: "q", midiValue: 65 }, // Bar 5
-            { keys: ["r/4"], duration: "h" }, { keys: ["c/4"], duration: "h", midiValue: 60 },                                             // Bar 6
-            { keys: ["r/4"], duration: "h" }, { keys: ["g/4"], duration: "q", midiValue: 67 }, { keys: ["e/4"], duration: "q", midiValue: 64 }, // Bar 7
-            { keys: ["r/4"], duration: "h" }, { keys: ["c/4"], duration: "h", midiValue: 60 },                                             // Bar 8
-            { keys: ["r/4"], duration: "h" }, { keys: ["d/4"], duration: "q", midiValue: 62 }, { keys: ["b/3"], duration: "q", midiValue: 59 }, // Bar 9
-            { keys: ["r/4"], duration: "h" }, { keys: ["c/4"], duration: "h", midiValue: 60 },                                             // Bar 10
-            { keys: ["r/4"], duration: "h" }, { keys: ["e/4"], duration: "q", midiValue: 64 }, { keys: ["g/4"], duration: "q", midiValue: 67 }, // Bar 11
-            { keys: ["r/4"], duration: "h" }, { keys: ["d/4"], duration: "h", midiValue: 62 },                                             // Bar 12
+        notesTreble: [ // Mano Destra: "Response" melodico esteso per coprire tutta la battuta
+            // Bar 1 - Originale MS: C7(h) R(h) | MD: R(h) G(q) Eb(q)
+            // Nuovo MD: C E G Eb (note di C7, con G Eb come risposta)
+            { keys: ["c/4"], duration: "q", midiValue: 60 }, { keys: ["e/4"], duration: "q", midiValue: 64 },
+            { keys: ["g/4"], duration: "q", midiValue: 67 }, { keys: ["eb/4"], duration: "q", midiValue: 63 },
+            // Bar 2 - Originale MS: C7(h) R(h) | MD: R(h) C(h)
+            // Nuovo MD: G E C C (con C tenuto come risposta)
+            { keys: ["g/4"], duration: "q", midiValue: 67 }, { keys: ["e/4"], duration: "q", midiValue: 64 },
+            { keys: ["c/4"], duration: "q", midiValue: 60 }, { keys: ["c/4"], duration: "q", midiValue: 60 }, // O { keys: ["c/4"], duration: "h", midiValue: 60 } se si preferisce tenere
+            // Bar 3 - Originale MS: C7(h) R(h) | MD: R(h) E(q) G(q)
+            // Nuovo MD: C G E G
+            { keys: ["c/4"], duration: "q", midiValue: 60 }, { keys: ["g/4"], duration: "q", midiValue: 67 },
+            { keys: ["e/4"], duration: "q", midiValue: 64 }, { keys: ["g/4"], duration: "q", midiValue: 67 },
+            // Bar 4 - Originale MS: C7(h) R(h) | MD: R(h) C(h)
+            // Nuovo MD: E G C C
+            { keys: ["e/4"], duration: "q", midiValue: 64 }, { keys: ["g/4"], duration: "q", midiValue: 67 },
+            { keys: ["c/5"], duration: "q", midiValue: 72 }, { keys: ["c/5"], duration: "q", midiValue: 72 },
+            // Bar 5 (F7) - Originale MS: F7(h) R(h) | MD: R(h) A(q) F(q)
+            // Nuovo MD: F C A F
+            { keys: ["f/4"], duration: "q", midiValue: 65 }, { keys: ["c/5"], duration: "q", midiValue: 72 },
+            { keys: ["a/4"], duration: "q", midiValue: 69 }, { keys: ["f/4"], duration: "q", midiValue: 65 },
+            // Bar 6 (F7) - Originale MS: F7(h) R(h) | MD: R(h) C(h)
+            // Nuovo MD: A F C C
+            { keys: ["a/4"], duration: "q", midiValue: 69 }, { keys: ["f/4"], duration: "q", midiValue: 65 },
+            { keys: ["c/4"], duration: "q", midiValue: 60 }, { keys: ["c/4"], duration: "q", midiValue: 60 },
+            // Bar 7 (C7)
+            { keys: ["c/4"], duration: "q", midiValue: 60 }, { keys: ["e/4"], duration: "q", midiValue: 64 },
+            { keys: ["g/4"], duration: "q", midiValue: 67 }, { keys: ["e/4"], duration: "q", midiValue: 64 },
+            // Bar 8 (C7)
+            { keys: ["g/4"], duration: "q", midiValue: 67 }, { keys: ["e/4"], duration: "q", midiValue: 64 },
+            { keys: ["c/4"], duration: "q", midiValue: 60 }, { keys: ["c/4"], duration: "q", midiValue: 60 },
+            // Bar 9 (G7) - Originale MS: G7(h) R(h) | MD: R(h) D(q) B(q)
+            // Nuovo MD: G B D B
+            { keys: ["g/3"], duration: "q", midiValue: 55 }, { keys: ["b/3"], duration: "q", midiValue: 59 },
+            { keys: ["d/4"], duration: "q", midiValue: 62 }, { keys: ["b/3"], duration: "q", midiValue: 59 },
+            // Bar 10 (F7)
+            { keys: ["f/4"], duration: "q", midiValue: 65 }, { keys: ["a/4"], duration: "q", midiValue: 69 },
+            { keys: ["c/4"], duration: "q", midiValue: 60 }, { keys: ["c/4"], duration: "q", midiValue: 60 },
+            // Bar 11 (C7)
+            { keys: ["c/4"], duration: "q", midiValue: 60 }, { keys: ["g/4"], duration: "q", midiValue: 67 },
+            { keys: ["e/4"], duration: "q", midiValue: 64 }, { keys: ["g/4"], duration: "q", midiValue: 67 },
+            // Bar 12 (G7) - Originale MS: G7(h) R(h) | MD: R(h) D(h)
+            // Nuovo MD: B G D D
+            { keys: ["b/3"], duration: "q", midiValue: 59 }, { keys: ["g/3"], duration: "q", midiValue: 55 },
+            { keys: ["d/4"], duration: "q", midiValue: 62 }, { keys: ["d/4"], duration: "q", midiValue: 62 },
         ],
-        notesBass: [ // Mano Sinistra: "Call" ritmico/armonico (accordo sui primi due beat)
-            { keys: ["c/2","e/2","g/2","bb/2"], duration: "h", midiValues: [36,40,43,46] }, { keys: ["r/4"], duration: "h" }, // Bar 1 C7
-            { keys: ["c/2","e/2","g/2","bb/2"], duration: "h", midiValues: [36,40,43,46] }, { keys: ["r/4"], duration: "h" }, // Bar 2 C7
-            { keys: ["c/2","e/2","g/2","bb/2"], duration: "h", midiValues: [36,40,43,46] }, { keys: ["r/4"], duration: "h" }, // Bar 3 C7
-            { keys: ["c/2","e/2","g/2","bb/2"], duration: "h", midiValues: [36,40,43,46] }, { keys: ["r/4"], duration: "h" }, // Bar 4 C7
-            { keys: ["f/1","a/1","c/2","eb/2"], duration: "h", midiValues: [29,33,36,39] }, { keys: ["r/4"], duration: "h" }, // Bar 5 F7
-            { keys: ["f/1","a/1","c/2","eb/2"], duration: "h", midiValues: [29,33,36,39] }, { keys: ["r/4"], duration: "h" }, // Bar 6 F7
-            { keys: ["c/2","e/2","g/2","bb/2"], duration: "h", midiValues: [36,40,43,46] }, { keys: ["r/4"], duration: "h" }, // Bar 7 C7
-            { keys: ["c/2","e/2","g/2","bb/2"], duration: "h", midiValues: [36,40,43,46] }, { keys: ["r/4"], duration: "h" }, // Bar 8 C7
-            { keys: ["g/1","b/1","d/2","f/2"], duration: "h", midiValues: [31,35,38,41] }, { keys: ["r/4"], duration: "h" }, // Bar 9 G7
-            { keys: ["f/1","a/1","c/2","eb/2"], duration: "h", midiValues: [29,33,36,39] }, { keys: ["r/4"], duration: "h" }, // Bar 10 F7
-            { keys: ["c/2","e/2","g/2","bb/2"], duration: "h", midiValues: [36,40,43,46] }, { keys: ["r/4"], duration: "h" }, // Bar 11 C7
-            { keys: ["g/1","b/1","d/2","f/2"], duration: "h", midiValues: [31,35,38,41] }, { keys: ["r/4"], duration: "h" }, // Bar 12 G7
+        notesBass: [ // Mano Sinistra: Accordi su ogni semiminima
+            // Bar 1 (C7)
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            // Bar 2 (C7)
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            // Bar 3 (C7)
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            // Bar 4 (C7)
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            // Bar 5 (F7)
+            { keys: ["f/1","a/1","c/2","eb/2"], duration: "q", midiValues: [29,33,36,39] },
+            { keys: ["f/1","a/1","c/2","eb/2"], duration: "q", midiValues: [29,33,36,39] },
+            { keys: ["f/1","a/1","c/2","eb/2"], duration: "q", midiValues: [29,33,36,39] },
+            { keys: ["f/1","a/1","c/2","eb/2"], duration: "q", midiValues: [29,33,36,39] },
+            // Bar 6 (F7)
+            { keys: ["f/1","a/1","c/2","eb/2"], duration: "q", midiValues: [29,33,36,39] },
+            { keys: ["f/1","a/1","c/2","eb/2"], duration: "q", midiValues: [29,33,36,39] },
+            { keys: ["f/1","a/1","c/2","eb/2"], duration: "q", midiValues: [29,33,36,39] },
+            { keys: ["f/1","a/1","c/2","eb/2"], duration: "q", midiValues: [29,33,36,39] },
+            // Bar 7 (C7)
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            // Bar 8 (C7)
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            // Bar 9 (G7)
+            { keys: ["g/1","b/1","d/2","f/2"], duration: "q", midiValues: [31,35,38,41] },
+            { keys: ["g/1","b/1","d/2","f/2"], duration: "q", midiValues: [31,35,38,41] },
+            { keys: ["g/1","b/1","d/2","f/2"], duration: "q", midiValues: [31,35,38,41] },
+            { keys: ["g/1","b/1","d/2","f/2"], duration: "q", midiValues: [31,35,38,41] },
+            // Bar 10 (F7)
+            { keys: ["f/1","a/1","c/2","eb/2"], duration: "q", midiValues: [29,33,36,39] },
+            { keys: ["f/1","a/1","c/2","eb/2"], duration: "q", midiValues: [29,33,36,39] },
+            { keys: ["f/1","a/1","c/2","eb/2"], duration: "q", midiValues: [29,33,36,39] },
+            { keys: ["f/1","a/1","c/2","eb/2"], duration: "q", midiValues: [29,33,36,39] },
+            // Bar 11 (C7)
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            { keys: ["c/2","e/2","g/2","bb/2"], duration: "q", midiValues: [36,40,43,46] },
+            // Bar 12 (G7)
+            { keys: ["g/1","b/1","d/2","f/2"], duration: "q", midiValues: [31,35,38,41] },
+            { keys: ["g/1","b/1","d/2","f/2"], duration: "q", midiValues: [31,35,38,41] },
+            { keys: ["g/1","b/1","d/2","f/2"], duration: "q", midiValues: [31,35,38,41] },
+            { keys: ["g/1","b/1","d/2","f/2"], duration: "q", midiValues: [31,35,38,41] },
         ]
     },
     // =======================================================================================
